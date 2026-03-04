@@ -54,3 +54,132 @@
               </ul>
             </div>
           </div>
+
+          <!-- Card 2: Chatbots -->
+          <div class="card">
+            <h3>💬 Chatbots</h3>
+            <p>Assistentes virtuais que conversam com usuários.</p>
+            <div class="card-details">
+              <strong>Benefícios:</strong>
+              <ul>
+                <li>Atendimento 24/7</li>
+                <li>Respostas instantâneas</li>
+                <li>Redução de custos</li>
+                <li>Experiência personalizada</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 3: Reconhecimento de Imagens -->
+          <div class="card">
+            <h3>👁️ Reconhecimento de Imagens</h3>
+            <p>IA que identifica objetos, faces e padrões em imagens.</p>
+            <div class="card-details">
+              <strong>Usos:</strong>
+              <ul>
+                <li>Reconhecimento facial</li>
+                <li>Diagnóstico de doenças</li>
+                <li>Segurança e vigilância</li>
+                <li>Redes sociais</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 4: Processamento de Linguagem -->
+          <div class="card">
+            <h3>📝 Processamento de Linguagem Natural</h3>
+            <p>IA que compreende e gera texto humano.</p>
+            <div class="card-details">
+              <strong>Exemplos:</strong>
+              <ul>
+                <li>Tradução automática</li>
+                <li>Análise de sentimentos</li>
+                <li>Resumo de textos</li>
+                <li>Assistentes de voz</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Chatbot -->
+    <section id="chatbot" class="chatbot">
+      <div class="container">
+        <h2>💬 Simulador de Chatbot</h2>
+        <div class="chatbot-container">
+          <div class="chat-box">
+            <div id="chatMessages" class="chat-messages">
+              <div class="message bot-message">
+                <p>Olá! Sou um assistente de IA. Como posso ajudá-lo?</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="chat-input-area">
+            <input 
+              type="text" 
+              id="chatInput" 
+              placeholder="Digite sua mensagem..." 
+              onkeypress="enviarMensagemChat(event)"
+            >
+            <button class="btn btn-primary" onclick="enviarMensagemChat()">Enviar</button>
+          </div>
+
+          <div class="chat-sugestoes">
+            <p><strong>Sugestões:</strong></p>
+            <button class="btn btn-secondary" onclick="enviarSugestao('Como a IA funciona?')">Como a IA funciona?</button>
+            <button class="btn btn-secondary" onclick="enviarSugestao('Quais são as aplicações de IA?')">Aplicações de IA</button>
+            <button class="btn btn-secondary" onclick="enviarSugestao('O que é Machine Learning?')">Machine Learning</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Análise de Texto -->
+    <section id="analise" class="analise">
+      <div class="container">
+        <h2>📊 Análise de Texto com IA</h2>
+        <div class="analise-container">
+          <div class="analise-input">
+            <label for="textoAnalise">Digite um texto para análise:</label>
+            <textarea 
+              id="textoAnalise" 
+              placeholder="Cole seu texto aqui..." 
+              rows="6"
+              oninput="analisarTextoEmTempo()"
+            ></textarea>
+          </div>
+
+          <div class="analise-resultados">
+            <div class="resultado-item">
+              <h4>📈 Estatísticas</h4>
+              <div class="resultado-content">
+                <p>Palavras: <strong id="contPalavras">0</strong></p>
+                <p>Caracteres: <strong id="contCaracteres">0</strong></p>
+                <p>Parágrafos: <strong id="contParagrafos">0</strong></p>
+                <p>Tempo de leitura: <strong id="tempoLeitura">0</strong> min</p>
+              </div>
+            </div>
+
+            <div class="resultado-item">
+              <h4>😊 Análise de Sentimento</h4>
+              <div class="resultado-content">
+                <div id="sentimentoResultado" class="sentimento-resultado">
+                  <p>Digite algo para análise...</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="resultado-item">
+              <h4>🔤 Palavras Mais Frequentes</h4>
+              <div class="resultado-content">
+                <div id="palavrasFrequentes" class="palavras-frequentes">
+                  <p>Digite algo para análise...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
